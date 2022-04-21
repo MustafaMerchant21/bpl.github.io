@@ -12,20 +12,29 @@
     <style>
         body{
             background: #ffc300;
+            border-radius: 20px;
+            margin: 0;
         }
         section{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        section.landing{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
+            margin: 10px;
             /* border: 1px solid black; */
         }
         div{
             text-align: center;
         }
         div.title{
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         div.title>h1{
             font-family: 'Alegreya', serif;
@@ -41,7 +50,7 @@
             color: #ffedb1;
         }
         .timer{
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         .timer>h4{
             font-size: 20px;
@@ -53,11 +62,42 @@
         .timer>h4.tune{
             color: #003566;
         }
+        .landing>div>p>i{
+            color: #001d3d;
+            float: right;
+            font-family: Georgia, 'Times New Roman', Times, serif, ;
+            margin-bottom: 20px;
+        }
         hr{
             width: 50%;
             background-color: #ffdf77;
         }
 
+        .players{
+            background-color: #fff;
+            height: 100vh;
+            width: 100vw;
+            justify-content: flex-start;
+        }
+        .players>h2{
+            color: #ffc300;
+            font-family: 'Alegreya', sans-serif;
+            letter-spacing: 2;
+        }
+        .names{
+            /* margin: 10px 50px; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            height: 100%;
+        }
+        .names>div{
+            margin: 20px;
+            width: 25%;
+            height: 25%;
+        }
     </style>
 </head>
 <body>
@@ -72,11 +112,24 @@
             <hr color="#ffdf77">
             <h4 class="tune">Stay Tuned!</h4>
             <hr color="#ffdf77">
-
+        </div>
+        <div>
+            <p><i>Venue: Burhani Ground, Burhani Society, Dwarka,Nashik.</i></p>
         </div>
     </section>
     <section class="players">
-
+        <h2>Meet Our Players</h2>
+        <i>*(Webpage in progress. Please check regularly.....)</i>
+        <!-- <div class="names">
+            <div>Abdulkadir Betulwala</div>
+            <div>Aliasgar Bohri</div>
+            <div>Mustafa Merchant</div>
+            <div>Taher Malak</div>
+            <div>Huzaifa Gadli</div>
+            <div>Taha Anis</div>
+            <div>Murtaza Sadri</div>
+            <div>Mufaddal Suwasrawala</div>
+        </div> -->
     </section>
 </body>
 </html>
