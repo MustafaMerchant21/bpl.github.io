@@ -74,10 +74,10 @@
         }
 
         .players{
-            background-color: #fff;
+            background-color: #ededed;
             height: 100vh;
             width: 100vw;
-            justify-content: flex-start;
+            justify-content: space-evenly;
         }
         .players>h2{
             color: #ffc300;
@@ -87,17 +87,43 @@
         .names{
             /* margin: 10px 50px; */
             display: flex;
-            justify-content: flex-start;
+            flex-direction: row;
+            justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
-            border: 1px solid black;
-            height: 100%;
+            margin: 10px;
+            width: 100vw;
+            /* border: 1px solid green; */
+            height: max-content;
         }
-        .names>div{
-            margin: 20px;
-            width: 25%;
-            height: 25%;
+        .names_box{
+            display: flex;
+            flex-wrap: wrap;
+            flex-shrink: shrink;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: .9rem;
+            /* border: 1px solid black; */
+            width: 130px;
         }
+        .names_box>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            /* border: 1px solid black; */
+            margin: 10px;
+            margin-bottom: 20px;
+            height: 5rem;
+            background: #1e75c7;
+            border-radius: 10px;
+            box-shadow:
+            10.5px 12.5px 10px rgba(88, 68, 0, 0.151),
+            50px 50px 80px rgb(255, 195, 0, 0.2);
+            color: #fff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
     </style>
 </head>
 <body>
@@ -119,19 +145,23 @@
     </section>
     <section class="players">
         <h2>Meet Our Players</h2>
-        <hr width="100%">
+        <!-- <hr width="100%">
         <i>*(Webpage in progress. Updating soon. Please check regularly.....)</i>
-        <hr width="100%">
-        <!-- <div class="names">
-            <div>Abdulkadir Betulwala</div>
-            <div>Aliasgar Bohri</div>
-            <div>Mustafa Merchant</div>
-            <div>Taher Malak</div>
-            <div>Huzaifa Gadli</div>
-            <div>Taha Anis</div>
-            <div>Murtaza Sadri</div>
-            <div>Mufaddal Suwasrawala</div>
-        </div> -->
+        <hr width="100%"> -->
+        <div class="names">
+            <div class="names_box">
+                <div>Abdulkadir Betulwala</div>
+                <div>Mustafa Merchant</div>
+                <div>Huzaifa Gadli</div>
+                <div>Murtaza Sadri</div>
+            </div>
+            <div class="names_box">
+                <div>Taher Malak</div>
+                <div>Aliasgar Bohri</div>
+                <div>Taha Anis</div>
+                <div>Mufaddal Suwasrawala</div>
+            
+        </div>
     </section>
 </body>
 </html>
