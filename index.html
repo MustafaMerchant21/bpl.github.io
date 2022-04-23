@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet">
     <style>
         body{
             background: #ffc300;
@@ -42,7 +43,17 @@
             margin-top: 10px ;
             margin-bottom: 0px ;
             color: #291f00;
+            animation: names 1s ease 0s 1 normal forwards;
         }
+        @keyframes names {
+	0% {
+		transform: scale(2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
         div.title>i>h5{
             margin-top: 0;
             margin-bottom: 5px;
@@ -60,8 +71,18 @@
             cursor: default;
         }
         .timer>h4.tune{
-            color: #003566;
+            color: #050050;
+            animation: tune 2s ease 0s infinite alternate-reverse forwards;
         }
+        @keyframes tune {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
         .landing>div>p>i{
             color: #001d3d;
             float: right;
@@ -72,9 +93,32 @@
             width: 50%;
             background-color: #ffdf77;
         }
+        .hrone{
+            animation: hr1 3s ease-in 0s infinite alternate-reverse forwards;
+        }
+        @keyframes hr1 {
+            0% {
+                transform: translateX(0);
+            }
 
+            100% {
+                transform: translateX(-100px);
+            }
+        }
+        .hrtwo{
+            animation: hr2 3s ease-in 0s infinite alternate-reverse forwards;
+        }
+        @keyframes hr2 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
+        }
         .players{
-            background-color: #ededed;
+            background-color: #fffef4;
             height: 100vh;
             width: 100vw;
             justify-content: space-evenly;
@@ -104,7 +148,7 @@
             align-items: center;
             font-size: .9rem;
             /* border: 1px solid black; */
-            width: 130px;
+            width: 45vw;
         }
         .names_box>div{
             display: flex;
@@ -115,15 +159,38 @@
             margin: 10px;
             margin-bottom: 20px;
             height: 5rem;
-            background: #1e75c7;
+            /* background: rgba(255, 196, 0, 0.527); */
             border-radius: 10px;
             box-shadow:
-            10.5px 12.5px 10px rgba(88, 68, 0, 0.151),
-            50px 50px 80px rgb(255, 195, 0, 0.2);
-            color: #fff;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            10.5px 12.5px 10px rgba(255, 196, 0, 0.190),
+            50px 50px 80px rgb(255, 196, 0, 0.06);
+            color: #291f00;
+            font-family: 'Alegreya', sans serif;
+           
         }
+        .names_box>div:hover{
+            animation: name shadow .3s ease 0s 1 normal forwards;
+        }
+        @keyframes nameboxes {
+            0% {
+                box-shadow:
+                    10.5px 12.5px 10px rgba(255, 196, 0, 0.1),
+                    50px 50px 80px rgb(255, 196, 0, 0.06);
+            }
 
+            100% {
+                box-shadow:
+                    10.5px 12.5px 10px rgba(255, 196, 0, 0.9),
+                    50px 50px 80px rgb(255, 196, 0, 0.06);
+            }
+        }
+        /* Copyright--> */
+        .footer{
+            height: 4vh;
+            text-align: center;
+            font-size: 12px;
+            font-family: 'Alegreya';
+        }
     </style>
 </head>
 <body>
@@ -135,9 +202,9 @@
         <div class="timer">
             <h4>Event Yet to Start</h4>
             <a href="https://logwork.com/countdown-72ky" class="countdown-timer" data-style="circles" data-timezone="Asia/Kolkata" data-textcolor="#000000" data-date="2022-05-02 10:00" data-background="#ffffff" data-digitscolor="#000000" data-unitscolor="#000000">Time Remaining!</a>
-            <hr color="#ffdf77">
+            <hr class="hrone" color="#ffdf77">
             <h4 class="tune">Stay Tuned!</h4>
-            <hr color="#ffdf77">
+            <hr class="hrtwo" color="#ffdf77">
         </div>
         <div>
             <p><i>Venue: Burhani Ground, Burhani Society, Dwarka,Nashik.</i></p>
@@ -162,6 +229,9 @@
                 <div>Mufaddal Suwasrawala</div>
             
         </div>
+    </section>
+    <section class="footer">
+        ©Copyright 2022 | Mustafa Merchant
     </section>
 </body>
 </html>
