@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet">
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body{
             background: #ffc300;
             border-radius: 20px;
@@ -187,11 +190,20 @@
                     50px 50px 80px rgb(255, 196, 0, 0.06);
             }
         }
+        .captain_wave{
+            position: absolute;
+            top: 96vh;
+            z-index: -1;
+            margin: 0;
+            width: 100%;
+            /* transform: translateY(20); */
+        }
         .captain{
+            margin: 0;
             height: 50vh;
             width: 100vw;
             /* background: rgb(0, 80, 157); */
-            background-color: rgb(218, 237, 255);
+            background-color: #daedff;
 
             display: flex;
             justify-content: space-evenly;
@@ -206,6 +218,7 @@
             padding: 20px;
             height: auto;
             width: 80%;
+            margin-bottom: 5rem;
         }
         .captain>h2{
             margin-top: 5rem;
@@ -218,13 +231,10 @@
             align-items: center;
             /* border: 1px solid black; */
             padding: .6rem;
-            height: 15rem;
+            height: auto;
             width: 60%;
-            margin-top: .5rem;
-            margin-bottom: 5rem;
-            /* margin: .4rem; */
+            margin: .3rem;
         }
-
         .names_box_captain>div{
             display: flex;
             justify-content: center;
@@ -232,9 +242,10 @@
             /* border: 1px solid black; */
             border-radius: 10px;
             padding: 5px;
-            height: 40%;
-            width: 8rem;
+            height: 6rem;
+            width: 9rem;
             margin: 1em;
+            /* margin-right: 1.8rem; */
             box-shadow:
             2.8px 2.8px 2.2px rgba(0, 80, 157, 0.02),
             6.7px 6.7px 5.3px rgba(0, 80, 157, 0.028),
@@ -245,6 +256,7 @@
             ;
             font-family: 'Alegreya';
         }
+        
 
         /* Copyright--> */
         .footer{
@@ -272,6 +284,7 @@
             <p><i>Venue: Burhani Ground, Burhani Society, Dwarka,Nashik.</i></p>
         </div>
     </section>
+    <img class="captain_wave" src="img/Vector.png" alt="">
     <section class="captain">
         <h2>Our Captains</h2>
         <div class="names_captain">
