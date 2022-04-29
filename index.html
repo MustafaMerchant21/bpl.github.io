@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BPL</title>
+    <script src="script.js"></script>
     <script src="https://cdn.logwork.com/widget/countdown.js"></script>
     <!-- <script src="script.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -435,6 +436,30 @@ backdrop-filter: blur(7px);
             width: 2.5rem;
             filter: drop-shadow(5px 5px 8px rgba(184, 45, 45, 0.36));
         }
+
+        .score_main{
+            height: fit-content;
+            padding: 1rem 1.5rem;
+
+        }
+        .score_main>div{
+            background-color: #fff;
+            width: 60%;
+            padding: .2rem .6rem;
+            border-radius: 25px;
+            margin: 1.5rem 4rem;
+            box-shadow: 10px 10px 20px #3d2f0036;
+        }
+        .score_main>table{
+            width: 95%;
+            border-style: solid;
+        }
+        td{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 1rem;
+        }
+
         /* Copyright--> */
         .footer{
             height: 4vh;
@@ -442,6 +467,7 @@ backdrop-filter: blur(7px);
             font-size: 12px;
             font-family: 'Alegreya';
         }
+        
     </style>
 </head>
 <body>
@@ -505,7 +531,7 @@ backdrop-filter: blur(7px);
                 <div>Husain Anis</div>
             </div>
             <div class="names_box_captain">
-                <div>Idris Badri</div>
+                <div>Haider Lokhandwala</div>
                 <div>Taha Anis</div>
                             
         </div>
@@ -522,7 +548,6 @@ backdrop-filter: blur(7px);
                 <div>Huzaifa Gadli</div>
                 <div>Murtaza Sadri</div>
                 <div>Haider Lokhandwala</div>
-                <div>Idris Badri</div>
             </div>
                 
             <div class="names_box_players">
@@ -536,13 +561,55 @@ backdrop-filter: blur(7px);
             <div></div>
     </section>
 
-    <div class="update">
-        <a class="button_update" href="#update">
+    <div id="mydiv" class="update">
+        <a  class="button_update" href="#update">
             <img src="img/Group 1.png" alt="">
         </a>
     </div>
+
+    <!-- <section class="score_main">
+        <div>Scores</div>
+        <table border="1px">
+            <tr>
+                <th>Team</th>
+                <th>M</th>
+                <th>W</th>
+                <th>L</th>
+                <th>Overall</th>
+            </tr>
+            <tr>
+                <td>Huzaifa.R</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Huzaifa.R</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Huzaifa.R</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Huzaifa.R</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </section> -->
+
     <!-- <section class="footer">
-        ©Copyright 2022 | Mustafa Merchant
+        ©Copyright 2022 | <a href="mailto: mr.merchant53@gmail.com">Mustafa Merchant</a> 
     </section> -->
 </body>
 </html>
