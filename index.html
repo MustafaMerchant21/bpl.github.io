@@ -17,6 +17,9 @@
         *{
             box-sizing: border-box;
         }
+        *::selection{
+            background-color: rgb(203, 221, 255);
+        }
         body{
             background: #ffc300;
             border-radius: 20px;
@@ -450,6 +453,18 @@ backdrop-filter: blur(7px);
             margin: 1.5rem 4rem;
             box-shadow: 10px 10px 20px #3d2f0036;
         }
+        .score_main>div:hover{
+            transition: anime 1s infinite;
+
+        }
+        @keyframes anime{
+            from{
+                top: 0;
+            }
+            to{
+                top;
+            }
+        }
         .score_main>table{
             width: 95%;
             border-style: solid;
@@ -567,7 +582,7 @@ backdrop-filter: blur(7px);
         </a>
     </div>
 
-    <!-- <section class="score_main">
+    <section class="score_main">
         <div>Scores</div>
         <table border="1px">
             <tr>
@@ -606,7 +621,7 @@ backdrop-filter: blur(7px);
                 <td>-</td>
             </tr>
         </table>
-    </section> -->
+    </section>
 
     <!-- <section class="footer">
         ©Copyright 2022 | <a href="mailto: mr.merchant53@gmail.com">Mustafa Merchant</a> 
