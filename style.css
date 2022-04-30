@@ -1,0 +1,444 @@
+*{
+    box-sizing: border-box;
+}
+*::selection{
+    background-color: rgb(203, 221, 255);
+}
+body{
+    background: #ffc300;
+    border-radius: 20px;
+    margin: 0;
+}
+
+/* Menu Styling */
+
+/*
+* Made by Erik Terwan
+* 24th of November 2015
+* MIT license
+*
+*
+* If you are thinking of using this in
+* production code, beware of the browser
+* prefixes.
+*/
+
+
+
+a
+{
+text-decoration: none;
+color: #232323;
+
+transition: color 0.3s ease;
+}
+
+a:hover
+{
+color: tomato;
+}
+
+#menuToggle
+{
+display: block;
+position: absolute;
+position: fixed;
+top: 50px;
+right: 55px;
+
+z-index: 1;
+
+-webkit-user-select: none;
+user-select: none;
+}
+
+#menuToggle input
+{
+display: block;
+width: 40px;
+height: 32px;
+position: absolute;
+top: -7px;
+left: -5px;
+
+cursor: pointer;
+
+opacity: 0; /* hide this */
+z-index: 2; /* and place it over the hamburger */
+
+-webkit-touch-callout: none;
+}
+
+/*
+* Just a quick hamburger
+*/
+#menuToggle span
+{
+display: block;
+width: 30px;
+height: 4px;
+margin-bottom: 5px;
+position: relative;
+
+background: #181818;
+border-radius: 3px;
+
+z-index: 1;
+
+transform-origin: 4px 0px;
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+transform-origin: 0% 100%;
+}
+
+/* 
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
+#menuToggle input:checked ~ span
+{
+opacity: 1;
+transform: rotate(45deg) translate(-2px, -1px);
+background: #232323;
+}
+
+/*
+* But let's hide the middle one.
+*/
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+* Ohyeah and the last one should go the other direction
+*/
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+opacity: 1;
+transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#menu
+{
+position: absolute;
+width: 300px;
+margin: -100px 0 0 0;
+padding: 50px;
+padding-top: 125px;
+right: -100px;
+
+background: #ededed;
+list-style-type: none;
+-webkit-font-smoothing: antialiased;
+/* to stop flickering of text in safari */
+
+transform-origin: 0% 0%;
+transform: translate(100%, 0);
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+padding: 10px 0;
+font-size: 22px;
+}
+
+/*
+* And let's fade it in from the left
+*/
+#menuToggle input:checked ~ ul
+{
+transform: none;
+opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+#menu {
+    transform: none;
+    opacity: 0;
+
+    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10px;
+    /* border: 1px solid black; */
+}
+div{
+    text-align: center;
+}
+div.title{
+    margin-bottom: 20px;
+}
+div.title>h1{
+    font-family: 'Alegreya', serif;
+    font-size: 60px;
+    margin-top: 10px ;
+    margin-bottom: 0px ;
+    color: #291f00;
+    animation: names 1s ease 0s 1 normal forwards;
+}
+@keyframes names {
+0% {
+transform: scale(2);
+}
+
+100% {
+transform: scale(1);
+}
+}
+div.title>i>h5{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #ffedb1;
+}
+.timer{
+    margin-bottom: 10px;
+}
+.timer>h4{
+    font-size: 20px;
+}
+.timer>a{
+    font-weight: 600;
+    cursor: default;
+}
+.timer>h4.tune{
+    color: #050050;
+    animation: tune 2s ease 0s infinite alternate-reverse forwards;
+}
+@keyframes tune {
+0% {
+opacity: 0;
+}
+
+100% {
+opacity: 1;
+}
+}
+.landing>div>p>i{
+    color: #001d3d;
+    float: right;
+    font-family: Georgia, 'Times New Roman', Times, serif, ;
+    margin-bottom: 20px;
+}
+hr{
+    width: 50%;
+    background-color: #ffdf77;
+}
+.hrone{
+    animation: hr1 3s ease-in 0s infinite alternate-reverse forwards;
+}
+@keyframes hr1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+.hrtwo{
+    animation: hr2 3s ease-in 0s infinite alternate-reverse forwards;
+}
+@keyframes hr2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
+}
+.players{
+    background-color: #fffef4;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.players>h2{
+    color: #ffc300;
+    font-family: 'Alegreya', sans-serif;
+    letter-spacing: 2;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+.names_players{
+    /* margin: 10px 50px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin: 10px; */
+    width: 100vw;
+    /* border: 1px solid green; */
+    height: fit-content;
+}
+.names_box_players{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-shrink: shrink; */
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: .9rem;
+    /* border: 1px solid black; */
+    width: 45vw;
+    height: fit-content;
+}
+.names_box_players>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    /* border: 1px solid black; */
+    margin: 10px;
+    margin-bottom: 25px;
+    height: 4.5rem;
+    /* background: rgba(255, 196, 0, 0.527); */
+    border-radius: 10px;
+    box-shadow:
+    10.5px 12.5px 10px rgba(255, 196, 0, 0.190),
+    50px 50px 80px rgb(255, 196, 0, 0.06);
+    color: #291f00;
+    font-family: 'Alegreya', sans serif;
+   
+}
+
+.captain_wave{
+    position: absolute;
+    top: 92.8vh;
+    z-index: -1;
+    margin: 0;
+    width: 100%;
+    /* transform: translateY(20); */
+}
+.captain{
+    margin: 0;
+    height: 50vh;
+    width: 100vw;
+    /* background: rgb(0, 80, 157); */
+    background-color: #daedff;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(0, 30, 58);
+}
+.names_captain{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+    width: 80%;
+    margin-bottom: 10rem;
+}
+.captain>h2{
+    margin-top: 8rem;
+    color: rgb(0, 80, 157);
+}
+.names_box_captain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding: .6rem;
+    height: auto;
+    width: 60%;
+    margin: .3rem;
+}
+.names_box_captain>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding: 5px;
+    height: 6rem;
+    width: 9rem;
+    margin: 1em;
+    /* margin-right: 1.8rem; */
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 80, 157, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 80, 157, 0.028),
+    12.5px 12.5px 10px rgba(0, 80, 157, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 80, 157, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 80, 157, 0.05);
+    font-family: 'Alegreya';
+}
+.captain_wave2{
+    position: absolute;
+    /* border: 1px solid black; */
+    top: 74.5rem;
+    width: 100%;
+}
+.update{
+    position: absolute;
+    position: fixed;
+    top: 79vh;
+    right: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.432);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.04), 7px 7px 8px rgba(0, 0, 0, 0.15), 20px 20px 16px rgba(0, 0, 0, 0.11),-10px -10px 16px rgba(0, 0, 0, 0.04);
+backdrop-filter: blur(7px);
+}
+.update>a>img{
+    width: 2.5rem;
+    filter: drop-shadow(5px 5px 8px rgba(184, 45, 45, 0.36));
+}
+
+.score_main{
+    background-color: #DDE3FF;
+    width: 100%;
+    height: fit-content;
+
+}
+.score_main>img{
+    width: 100%;
+}
+
+/* Copyright--> */
+.footer{
+    height: 4vh;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Alegreya';
+}
