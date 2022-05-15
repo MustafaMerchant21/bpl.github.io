@@ -425,20 +425,12 @@ backdrop-filter: blur(7px);
     filter: drop-shadow(5px 5px 8px rgba(184, 45, 45, 0.36));
 }
 
-.score_main{
-    background-color: #DDE3FF;
-    width: 100%;
-    height: fit-content;
-
-}
-.score_main>img{
-    width: 100%;
-}
-
 /* Copyright--> */
 .footer{
     height: 4vh;
-    text-align: center;
     font-size: 12px;
     font-family: 'Alegreya';
+}
+.footer>a{
+    display: inline;
 }
